@@ -40,7 +40,7 @@ jobs:
           git checkout build || git checkout -b build
 
           # Copy build artifacts
-          cp -r mybook/_build/html/* .
+          cp -r ./_build/html/* .
 
           # Commit and push changes
           git add .
