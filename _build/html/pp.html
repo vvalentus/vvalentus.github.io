@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -381,6 +381,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">mean</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -968,6 +969,42 @@ Name: count, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/f0f0a91afa77bfffec1a6aef9d7a15a3cc4bce3f6f6d54d831dfe0039126e353.png" src="_images/f0f0a91afa77bfffec1a6aef9d7a15a3cc4bce3f6f6d54d831dfe0039126e353.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Weight&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df2016m</span><span class="p">,</span> <span class="n">estimator</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;Set2&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Sexo&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;Peso&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Peso promedio por sexo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 0, &#39;Sexo&#39;),
+ Text(0, 0.5, &#39;Peso&#39;),
+ Text(0.5, 1.0, &#39;Peso promedio por sexo&#39;)]
+</pre></div>
+</div>
+<img alt="_images/5c9d3fdb9123031f440892e4efb19a7512bc82a97f98687f54867ba58de734bd.png" src="_images/5c9d3fdb9123031f440892e4efb19a7512bc82a97f98687f54867ba58de734bd.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Sport&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Weight&quot;</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df2016m</span><span class="p">,</span> <span class="n">estimator</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;Set2&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span> <span class="n">sports</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;Sexo&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;Peso&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Peso promedio por sexo y deporte&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s2">&quot;Atletismo&quot;</span><span class="p">,</span> <span class="s2">&quot;Natación&quot;</span><span class="p">,</span> <span class="s2">&quot;Remo&quot;</span><span class="p">,</span> <span class="s2">&quot;Fútbol&quot;</span><span class="p">,</span> <span class="s2">&quot;Hockey&quot;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0, 0, &#39;Atletismo&#39;),
+ Text(1, 0, &#39;Natación&#39;),
+ Text(2, 0, &#39;Remo&#39;),
+ Text(3, 0, &#39;Fútbol&#39;),
+ Text(4, 0, &#39;Hockey&#39;)]
+</pre></div>
+</div>
+<img alt="_images/c297f011af4bdd40ef50f5c6986146d47503227f168cf8133948ea37681479b4.png" src="_images/c297f011af4bdd40ef50f5c6986146d47503227f168cf8133948ea37681479b4.png" />
 </div>
 </div>
 <div class="admonition note">
