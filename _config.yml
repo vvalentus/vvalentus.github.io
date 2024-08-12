@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://https://github.com/vvalentus/vvalentus.github.io  # Online location of your book
+  url: github.com/vvalentus/vvalentus.github.io  # Online location of your book
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
