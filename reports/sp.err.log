@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+fig, axes = plt.subplots(1, 3, figsize=(21, 7))
+
+sns.scatterplot(data=df2016m, x="Height", y="Weight", hue="Medal", palette="Set2", style="Medal", ax=axes[0])
+axes[0].set(title="Peso y altura por medalla", xlabel="Altura en centímetros", ylabel="Peso en kilogramos")
+
+
+sns.scatterplot(data=df2016m, x="Height", y="Weight", hue="Sex", palette="Set2", style="Sex", ax=axes[1])
+axes[1].set(title="Peso y altura por sexo", xlabel="Altura en centímetros", ylabel="Peso en kilogramos")
+
+sns.scatterplot(data = df2016m, x = df2016m['Height'], y = df2016m['Weight'], hue = df2016m['Sport'], palette = 'Set2', style = df2016m['Sport'], ax = axes[2])
+axes[2].set(title = 'Peso y altura por deporte', xlabel = 'Altura en centímetros', ylabel = 'Peso en kilogramos')
+
+plt.tight_layout()
+
+plt.show()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[4], line 3[0m
+[1;32m      1[0m fig, axes [38;5;241m=[39m plt[38;5;241m.[39msubplots([38;5;241m1[39m, [38;5;241m3[39m, figsize[38;5;241m=[39m([38;5;241m21[39m, [38;5;241m7[39m))
+[0;32m----> 3[0m [43msns[49m[38;5;241m.[39mscatterplot(data[38;5;241m=[39mdf2016m, x[38;5;241m=[39m[38;5;124m"[39m[38;5;124mHeight[39m[38;5;124m"[39m, y[38;5;241m=[39m[38;5;124m"[39m[38;5;124mWeight[39m[38;5;124m"[39m, hue[38;5;241m=[39m[38;5;124m"[39m[38;5;124mMedal[39m[38;5;124m"[39m, palette[38;5;241m=[39m[38;5;124m"[39m[38;5;124mSet2[39m[38;5;124m"[39m, style[38;5;241m=[39m[38;5;124m"[39m[38;5;124mMedal[39m[38;5;124m"[39m, ax[38;5;241m=[39maxes[[38;5;241m0[39m])
+[1;32m      4[0m axes[[38;5;241m0[39m][38;5;241m.[39mset(title[38;5;241m=[39m[38;5;124m"[39m[38;5;124mPeso y altura por medalla[39m[38;5;124m"[39m, xlabel[38;5;241m=[39m[38;5;124m"[39m[38;5;124mAltura en centímetros[39m[38;5;124m"[39m, ylabel[38;5;241m=[39m[38;5;124m"[39m[38;5;124mPeso en kilogramos[39m[38;5;124m"[39m)
+[1;32m      7[0m sns[38;5;241m.[39mscatterplot(data[38;5;241m=[39mdf2016m, x[38;5;241m=[39m[38;5;124m"[39m[38;5;124mHeight[39m[38;5;124m"[39m, y[38;5;241m=[39m[38;5;124m"[39m[38;5;124mWeight[39m[38;5;124m"[39m, hue[38;5;241m=[39m[38;5;124m"[39m[38;5;124mSex[39m[38;5;124m"[39m, palette[38;5;241m=[39m[38;5;124m"[39m[38;5;124mSet2[39m[38;5;124m"[39m, style[38;5;241m=[39m[38;5;124m"[39m[38;5;124mSex[39m[38;5;124m"[39m, ax[38;5;241m=[39maxes[[38;5;241m1[39m])
+
+[0;31mNameError[0m: name 'sns' is not defined
+

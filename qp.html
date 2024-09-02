@@ -1,0 +1,1698 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quinta entrega &#8212; Entregas de visualización</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'qp';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mapa de la quinta entrega" href="mapa.html" />
+    <link rel="prev" title="Segunda parte" href="sp.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Entregas de visualización - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Entregas de visualización - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Instrucciones
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pp.html">Primera parte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sp.html">Segunda parte</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quinta entrega</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapa.html">Mapa de la quinta entrega</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="github.com/vvalentus/vvalentus.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="github.com/vvalentus/vvalentus.github.io/issues/new?title=Issue%20on%20page%20%2Fqp.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/qp.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Quinta entrega</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pasos-a-seguir">Pasos a seguir</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias">Librerías</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-primera-parte">Desarrollo primera parte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sobre-los-datos">Sobre los datos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtros">Filtros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nas">NAs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas">Gráficas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-segunda-parte">Desarrollo segunda parte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Sobre los datos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-atipicos">Datos atípicos</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="quinta-entrega">
+<h1>Quinta entrega<a class="headerlink" href="#quinta-entrega" title="Link to this heading">#</a></h1>
+<section id="pasos-a-seguir">
+<h2>Pasos a seguir<a class="headerlink" href="#pasos-a-seguir" title="Link to this heading">#</a></h2>
+<p>Realice un análisis descriptivo completo y actualizado al julio 31 2024, incluyendo graficos, tablas y georreferenciación de la base de datos Accidentalidad_en_Barranquilla.csv. Deben entregar un script .R con los códigos usados.</p>
+<ol class="arabic simple">
+<li><p>Contextualizar tanto la base de datos como las variables describiendo en qué consiste cada una de ellas. La base de datos está en el sitio web: <a class="reference external" href="https://www.datos.gov.co/Transporte/Accidentalidad-en-Barranquilla/yb9r-2dsi">https://www.datos.gov.co/Transporte/Accidentalidad-en-Barranquilla/yb9r-2dsi</a></p></li>
+<li><p>Analizar las características de la base de datos. Estas pueden incluir: número de filas, número de columnas, nombres de las variables, tipos de variables, entre otros.</p></li>
+<li><p>Analizar cada una de las variables según su tipo: numéricas y categóricas.</p></li>
+<li><p>Filtrar la base de datos para entender mejor su estructura. Aplique filtros en al menos cinco oportunidades.</p></li>
+<li><p>Utilice la función table para explorar la base de datos.</p></li>
+<li><p>Identifique los valores NA (Not Available) en la base de datos.</p></li>
+<li><p>Analice la presencia de posibles valores atípicos.</p></li>
+<li><p>Aplique imputación de datos usando las siguientes opciones para method: method=”pmm” method=”norm.predict” method=”norm.nob” method=”norm”</p></li>
+<li><p>Identifique datos atípicos para cada variable en el dataset usando las técnicas estudiadas en clase. Además, realice imputación de los datos atípicos con base en lo desarrollado en el ítem anterior. Imputación/Capping/Predicción Test de Rosner, Dixon, Grubbs, Hampel, Percentiles, Boxplots, Histogramas, Descriptivos.</p></li>
+</ol>
+<p>Realice una exploración y un análisis descriptivo completo (incluyendo tablas de resumen y gráficos) de la base de datos disponible en <a class="reference external" href="https://www.sicom.gov.co/index.php/consulta-de-precios">este enlace</a>. Incluya gráficos que presenten los datos sobre un mapa de Colombia, para visualizar la distribución geográfica de los <strong>precios de los combustibles en el país (2018-2024).</strong></p>
+<section id="librerias">
+<h3>Librerías<a class="headerlink" href="#librerias" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">mean</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">from</span> <span class="nn">folium</span> <span class="kn">import</span> <span class="n">Choropleth</span><span class="p">,</span> <span class="n">Marker</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">folium.plugins</span> <span class="kn">import</span> <span class="n">HeatMap</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="desarrollo-primera-parte">
+<h2>Desarrollo primera parte<a class="headerlink" href="#desarrollo-primera-parte" title="Link to this heading">#</a></h2>
+<section id="sobre-los-datos">
+<h3>Sobre los datos<a class="headerlink" href="#sobre-los-datos" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Accidentalidad_en_Barranquilla_20240830.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La base de datos proporcionada contiene 25,600 registros con información detallada sobre los accidentes de tránsito ocurridos en Barranquilla, según los informes policiales de accidentes de tránsito (IPAT). Para cada incidente, se reportan datos como la fecha, hora, gravedad, clase del accidente, sitio exacto, y cantidades de heridos y muertos en el lugar del accidente. La información es proporcionada por la Alcaldía Distrital de Barranquilla.</p>
+<p>La base de datos cuenta con 11 variables tanto numéricas como categóricas. Las variables que contienen datos de texto incluyen la fecha completa del incidente, la hora exacta en la que ocurrió, la gravedad del accidente, tipo del incidente, y el lugar exacto donde sucedió. Por otro lado, las variables numéricas abarcan el número de heridos y fallecidos en el sitio del accidente, así como el total de accidentes registrados en ese momento. Además, componentes temporales como el año, mes y día de la semana también se almacenan como texto.</p>
+<p>Enfocándonos un poco en las variables numéricas, veamos ahora la distribución de el <strong>número de heridos en sitio del accidente</strong>. En promedio se registraron, 1.47 heridos por accidente, también se destaca la presencia de 15626 datos faltantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#beedc6&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Heridos en el Sitio del Accidente&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Cantidad de Heridos&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e352bf04a4d3865af9710ced4cfebcbb3835b0228827b4e33f423918853859df.png" src="_images/e352bf04a4d3865af9710ced4cfebcbb3835b0228827b4e33f423918853859df.png" />
+</div>
+</div>
+<p>Al graficar esta variable, observamos la presencia de muchos datos atípicos, con valores extremos hacia arriba. El registro con más heridos presentados fue con 42 heridos. Ahora, para la variable <strong>cantidad de muertos en accidente</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_MUERTOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    252.000000
+mean       1.035714
+std        0.185946
+min        1.000000
+25%        1.000000
+50%        1.000000
+75%        1.000000
+max        2.000000
+Name: CANT_MUERTOS_EN _SITIO_ACCIDENTE, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para aquellos registros donde se presentaron decesos, se tiene un promedio de una persona fallecida por accidente, sin embargo, existen outliers donde la cantidad de muertos asciende a dos personas. De igual manera que con la variable anterior, se destaca la presencia de 25358 datos faltantes.Y por último, para la variable relacionada al <strong>total de accidentes reportados en ese momento</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANTIDAD_ACCIDENTES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    25610.000000
+mean         1.000195
+std          0.013972
+min          1.000000
+25%          1.000000
+50%          1.000000
+75%          1.000000
+max          2.000000
+Name: CANTIDAD_ACCIDENTES, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>De manera similar a la variable anterior, se tiene una media de 1 (sd: 0.013971) y mediana de 1 (RIQ: 0). También se destaca la presencia de outliers que indican 2 accidentes simultaneos, en el mismo sitio y a la misma hora. A diferencia de las otras dos variables numéricas, no se encuentran datos faltantes en esta variable.</p>
+<p>Para las variables categóricas, comenzando con la <strong>fecha del accidente</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;FECHA_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FECHA_ACCIDENTE
+2018-06-08T00:00:00.000    34
+2018-11-16T00:00:00.000    33
+2019-05-22T00:00:00.000    31
+2019-10-05T00:00:00.000    30
+2020-02-13T00:00:00.000    29
+                           ..
+2023-07-18T00:00:00.000     1
+2023-08-01T00:00:00.000     1
+2020-03-25T00:00:00.000     1
+2023-06-26T00:00:00.000     1
+2020-04-12T00:00:00.000     1
+Name: count, Length: 2357, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se tiene información de 2357 días, siendo el 8 de junio del 2018 el día con más accidentes (34 accidentes), seguido del 16 de noviembre del 2018 con 33 y el 22 de mayo del 2019 con 31. Realizando el mismo análisis con la <strong>hora de accidente</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;HORA_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HORA_ACCIDENTE
+04:00:00:pm    408
+03:00:00:pm    408
+12:30:00:pm    387
+08:00:00:am    384
+05:00:00:pm    384
+              ... 
+11:23:00:pm      1
+10:57:00:am      1
+02:44:00:am      1
+03:28:00:pm      1
+08:08:00:pm      1
+Name: count, Length: 871, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se nota que las horas con más accidentes registrados son las 3pm (408), 4pm (408) y 12:30pm (387).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GRAVEDAD_ACCIDENTE
+Solo daños     15457
+Con heridos     9901
+Con muertos      252
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Afortunadamente, la mayoría de los accidentes fueron solo daños materiales, seguido de heridos y en menor medida con muertos (0.98%).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CLASE_ACCIDENTE
+Choque            23819
+Atropello          1344
+Caida Ocupante      194
+Otro                123
+Volcamiento         117
+Incendio             13
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>De los 25610 accidentes reportados, 23819 (93%) son debido a choques, 1344 (5,24%) por atropellos, el 1,76% restante está compuesto entre incendios, volcamientos, caída del ocupante, entre otros. Para la variable <strong>año</strong>, encontramos que 2018 es el año con más accidentes registrados y 2023 el que menos accidentes presentó, excluyendo 2024 dado que no se ha finalizado el año.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;AÑO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AÑO_ACCIDENTE
+2018    5898
+2019    5645
+2021    4700
+2022    3683
+2020    3281
+2023    1662
+2024     741
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>En cuanto a la variable relacionada al <strong>mes del accidente</strong>, se puede observar que febrero es el mes con más accidentes reportados en la ciudad de Barranquilla, seguido de marzo y enero. Agosto, con 1918 registros, es el mes con menos accidentes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;MES_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MES_ACCIDENTE
+February     2477
+March        2446
+January      2349
+December     2189
+May          2121
+June         2103
+October      2090
+April        2010
+November     1995
+September    1980
+July         1932
+August       1918
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Y por último, el día con más accidentes reportados es el día de martes, seguido por viernes y miércoles. En cambio, los domingos, son los días con menos accidentes reportados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;DIA_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DIA_ACCIDENTE
+Tue    4009
+Fri    3920
+Wed    3839
+Mon    3774
+Thu    3756
+Sat    3735
+Sun    2577
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filtros">
+<h3>Filtros<a class="headerlink" href="#filtros" title="Link to this heading">#</a></h3>
+<p>Veamos ahora aquellos accidentes realizados los fines de semana por choques según el mes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_filtrados</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;DIA_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Sat&#39;</span><span class="p">,</span> <span class="s1">&#39;Sun&#39;</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Choque&#39;</span><span class="p">)]</span>
+
+<span class="n">datos_filtrados</span><span class="p">[</span><span class="s1">&#39;MES_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MES_ACCIDENTE
+March        578
+February     557
+January      511
+June         498
+October      495
+December     492
+May          478
+September    465
+August       446
+April        443
+July         436
+November     423
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Siendo Marzo (578) el mes con más accidentes por choques en los fines de semana, seguido por febrero (557) y enero (511).Noviembre fue el mes que presentó menos accidentes los fines de semana (423).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_filtrados</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span>
+    <span class="p">(</span><span class="o">~</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;DIA_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Sat&#39;</span><span class="p">,</span> <span class="s1">&#39;Sun&#39;</span><span class="p">]))</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Choque&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">datos_filtrados</span><span class="p">[</span><span class="s1">&#39;MES_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MES_ACCIDENTE
+February     1753
+March        1690
+January      1670
+December     1536
+May          1490
+June         1454
+October      1435
+April        1428
+November     1426
+July         1395
+September    1366
+August       1354
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para el resto de días de la semana, febrero es el mes con más choques (1753), seguido de marzo (1690) y enero (1670). Agosto fue el mes con menos accidentes entre semana (1354).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_filtrados</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span>
+    <span class="n">be5</span><span class="p">[</span><span class="s1">&#39;MES_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;January&#39;</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">,</span> <span class="s1">&#39;April&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;June&#39;</span><span class="p">])</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Con heridos&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">datos_filtrados</span><span class="p">[</span><span class="s1">&#39;AÑO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AÑO_ACCIDENTE
+2018    865
+2022    861
+2023    833
+2019    795
+2024    722
+2021    659
+2020    533
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_filtrados</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span>
+    <span class="p">(</span><span class="o">~</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;MES_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;January&#39;</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">,</span> <span class="s1">&#39;April&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;June&#39;</span><span class="p">]))</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Con heridos&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">datos_filtrados</span><span class="p">[</span><span class="s1">&#39;AÑO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AÑO_ACCIDENTE
+2022    892
+2018    866
+2019    795
+2021    782
+2023    774
+2020    524
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Durante la primera mitad del año, 2020 fue el año con menos accidentes con heridos, mientras 2018 fue el año con más accidentes graves. Para el segundo semestre del año, el año con más accidentes graves fue 2022, nuevamente 2020 siendo el año con menos de este tipo de accidentes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos_filtrados</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;DIA_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Sat&#39;</span><span class="p">,</span> <span class="s1">&#39;Sun&#39;</span><span class="p">]))</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Con heridos&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">datos_filtrados</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CANT_HERIDOS_EN _SITIO_ACCIDENTE
+1.0     1798
+2.0      694
+3.0      154
+4.0       49
+5.0       23
+6.0        9
+7.0        1
+9.0        1
+11.0       1
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se puede observar como el rango de heridos en el sitio del accidente aumentó en los días de semana, manteniéndose entre 1 y 11 los sábados y domingo y entre 1 y 42 los días de semana. Aún así, son muchísimo más común que solo hayan entre 1 y 3 heridos.</p>
+</section>
+<section id="nas">
+<h3>NAs<a class="headerlink" href="#nas" title="Link to this heading">#</a></h3>
+<p>Se observa la presencia de NA’s solo en las columnas que brindan información sobre la cantidad de heridos y muertos en accidente, veamos ahora si el número de valores faltantes coincide con aquellos registros donde la gravedad del accidente sugiere la ausencia de personas heridas y muertas.</p>
+<p>Tomando los accidentes con heridos, se puede observar que el número de NA’s en el número de muertos coincide con el número de registros de este dataframe filtrado, es decir, no hay problema con la presencia de estos datos dado que representan el que no hayan habido muertos en estos accidentes</p>
+<p>En los 7 años de registros del dataframe se presentaron 252 accidentes con al menos un deceso, donde 169 no presentaron heridos. Es decir, en los 83 accidentes restantes se presentó por lo menos una persona herida.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">be5</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mapa de Calor de Datos Faltantes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/eb7899e2c289e97a2de811db75e36506939160a9be3460834a4ffe5177d06998.png" src="_images/eb7899e2c289e97a2de811db75e36506939160a9be3460834a4ffe5177d06998.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GRAVEDAD_ACCIDENTE
+Solo daños     60.355330
+Con heridos    38.660679
+Con muertos     0.983991
+Name: proportion, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esto arroja un 60,36% registros con la ausencia de datos en en el número de heridos y número de muertos al tiempo, este porcentaje coincide con el 60,36% de accidentes relacionados a solo daño. De igual manera, corresponde también el 38,66% faltante de numero de muertos al 38,66% de aquellos accidentes con heridos. El porcentaje correspondiente al 0.9% de accidentes con muertes se reparte entre una ausencia de heridos de 0.66% y registros completos de 0.32%.</p>
+<p>Esto quiere decir que los datos faltantes no requieren una imputación dado que no están relacionados a un error o datos no tomados, si no que hacen referencia a un valor que representa la ausencia de heridos o muertos como lo podría ser un 0.</p>
+<p>Debido al gran procentaje de datos faltantes también se podría proceder a eliminar las columnas involucradas, sin embargo para proceder con el análisis exploratorio se trabajará con la base de datos con los NAs.</p>
+</section>
+<section id="graficas">
+<h3>Gráficas<a class="headerlink" href="#graficas" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">be5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;AÑO_ACCIDENTE&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;Set2&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Relación entre Año del Accidente y Gravedad del Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Año del Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Accidentes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gravedad del Accidente&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d57f827a381a46635e727503b59bed75ff11ab937634540aaac11cac74ea3a65.png" src="_images/d57f827a381a46635e727503b59bed75ff11ab937634540aaac11cac74ea3a65.png" />
+</div>
+</div>
+<p>Se puede observar como 2018 fue un año con una recurrencia de accidentes bastante alta, por suerte, predominan aquellos accidentes donde solo hubo daños materiales en la mayoría de los años. En lo transcurrido del 2024, pasa algo muy curioso, y es que la categoría dominante de accidentes fueron aquellos con heridos, seguido de con muertos. Además, se notó una disminución bastante notable de accidentes en el 2020 en comparación al 2019 y en el 2021 en comparación al 2023. Los accidentes con muertes tienen recurrencias similares en todos los años.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_grouped</span> <span class="o">=</span> <span class="n">be5</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;AÑO_ACCIDENTE&#39;</span><span class="p">,</span> <span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;AÑO_ACCIDENTE&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Relación entre Año del Accidente y Tipo del Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Año del Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Accidentes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tipo de Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dba68732970c1ebf1a718b471fd069e4928fa03c763de893518d1ea176d9e243.png" src="_images/dba68732970c1ebf1a718b471fd069e4928fa03c763de893518d1ea176d9e243.png" />
+</div>
+</div>
+<p>Tal como se observó al momento de analizar cada variable individualmente, la proporción de accidentes por choques es muchísimo mayor en comparación a las otras razones. Se puede notar una disminución también los casos de accidentes por choque, mientras las otras categorías se mantienen constantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">be5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de la Cantidad de Heridos en el Sitio por Clase de Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Clase de Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Cantidad de Heridos en el Sitio del Accidente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ab5bb02cb38f5d776c986ba3dd9d5fb8e073cc09e9e0de9f91f8352a3cdd3b90.png" src="_images/ab5bb02cb38f5d776c986ba3dd9d5fb8e073cc09e9e0de9f91f8352a3cdd3b90.png" />
+</div>
+</div>
+<p>Aquí vemos por primera vez los atípicos, como se puede ver son muchísimos. Ya se había observado que la variable de la cantidad de heridos tenía un rango bastante amplio, desde, ahora por la imputación realizada, 0 hasta 42.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">iqr</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">-</span> <span class="n">q1</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span>
+
+<span class="n">outliers</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">)]</span>
+
+<span class="n">outliers</span><span class="p">[[</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">,</span> <span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">,</span> <span class="s1">&#39;CANT_HERIDOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CLASE_ACCIDENTE</th>
+      <th>GRAVEDAD_ACCIDENTE</th>
+      <th>CANT_HERIDOS_EN _SITIO_ACCIDENTE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>75</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>258</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>25373</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>25446</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>25466</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>25505</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>25550</th>
+      <td>Choque</td>
+      <td>Con heridos</td>
+      <td>5.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>303 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>Al tomar los datos atípicos, se observa la existencia de 303 datos atípicos en la variable <code class="docutils literal notranslate"><span class="pre">CANT_HERIDOS_EN._SITIO_ACCIDENTE</span></code>, tomando como atípicos los registros con más de 4 heridos en el accidente. Al realizar la misma observación en <code class="docutils literal notranslate"><span class="pre">CANT_MUERTOS_EN._SITIO_ACCIDENTE</span></code> se obtiene lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_MUERTOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_MUERTOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">iqr</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">-</span> <span class="n">q1</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span>
+
+<span class="n">outliers</span> <span class="o">=</span> <span class="n">be5</span><span class="p">[(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_MUERTOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">be5</span><span class="p">[</span><span class="s1">&#39;CANT_MUERTOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">)]</span>
+
+<span class="n">outliers</span><span class="p">[[</span><span class="s1">&#39;CLASE_ACCIDENTE&#39;</span><span class="p">,</span> <span class="s1">&#39;GRAVEDAD_ACCIDENTE&#39;</span><span class="p">,</span> <span class="s1">&#39;CANT_MUERTOS_EN _SITIO_ACCIDENTE&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CLASE_ACCIDENTE</th>
+      <th>GRAVEDAD_ACCIDENTE</th>
+      <th>CANT_MUERTOS_EN _SITIO_ACCIDENTE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1294</th>
+      <td>Atropello</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3500</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>7087</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>11469</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>18069</th>
+      <td>Atropello</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>20073</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>20360</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>25049</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>25341</th>
+      <td>Choque</td>
+      <td>Con muertos</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Aquí se puede observar que tomó como atípicos todos aquellos accidentes donde hubo más de un fallecido.</p>
+</section>
+</section>
+<section id="desarrollo-segunda-parte">
+<h2>Desarrollo segunda parte<a class="headerlink" href="#desarrollo-segunda-parte" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Sobre los datos<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>La base de datos analizada proviene del Sistema de Información de la Cadena de Distribución de Combustibles (SICOM), un sistema gestionado por el Ministerio de Minas y Energía. Este sistema integra a los diferentes agentes en la cadena de distribución de combustibles a nivel nacional, facilitando la gestión y sistematización de datos relacionados con la comercialización, distribución, transporte y almacenamiento de combustibles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t32023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;precios_t32023.csv&quot;</span><span class="p">)</span>
+<span class="n">t42023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;precios_t42023.csv&quot;</span><span class="p">)</span>
+<span class="n">t12023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;precios_t12023.csv&quot;</span><span class="p">)</span>
+<span class="n">t22023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;precios_t22023.csv&quot;</span><span class="p">)</span>
+
+<span class="n">d2023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">t32023</span><span class="p">,</span> <span class="n">t42023</span><span class="p">,</span> <span class="n">t12023</span><span class="p">,</span> <span class="n">t22023</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">d2023</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BANDERA</th>
+      <th>NOMBRE COMERCIAL</th>
+      <th>PRODUCTO</th>
+      <th>FECHA REGISTRO</th>
+      <th>DEPARTAMENTO</th>
+      <th>MUNICIPIO</th>
+      <th>VALOR PRECIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jul-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>20000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO SERVICENTRO LA PEDRERA</td>
+      <td>DIESEL</td>
+      <td>01-Jul-2023</td>
+      <td>AMAZONAS</td>
+      <td>LA PEDRERA</td>
+      <td>20000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO FLUVIAL BALSA JUNIN</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jul-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>11800.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO FLUVIAL BALSA JUNIN</td>
+      <td>DIESEL</td>
+      <td>01-Jul-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>14809.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TERPEL</td>
+      <td>ESTACION DE SERVICIO DISTRIBUIDORA EL PORVENIR</td>
+      <td>GASOLINA MOTOR</td>
+      <td>01-Jul-2023</td>
+      <td>AMAZONAS</td>
+      <td>LETICIA</td>
+      <td>16164.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Debido a la gran cantidad de datos, se limitó a trabajar con el dataframe del 2023.</p>
+<p>La base de datos incluye un total de 267,943 registros, cada uno representando registros diarios relacionados a la venta combustibles. Las variables incluyen información sobre el producto, su precio, y su ubicación y fecha de registro.</p>
+<p>Esta consta de 9 variables, 8 categóricas y 1 numérica. La variable numérica corresponde a <em><code class="docutils literal notranslate"><span class="pre">VALOR.PRECIO</span></code></em>, una variable que contiene el precio del galón de gasolina el día de ese registro.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    2.679430e+05
+mean     1.202313e+04
+std      2.870979e+04
+min      0.000000e+00
+25%      9.350000e+03
+50%      1.088000e+04
+75%      1.384900e+04
+max      1.475015e+07
+Name: VALOR PRECIO, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio del galón&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precio&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/62fb056b42b2f99829db9d03ed01f5cc8ce07a01d9c8c56b81854a6dd1767f0b.png" src="_images/62fb056b42b2f99829db9d03ed01f5cc8ce07a01d9c8c56b81854a6dd1767f0b.png" />
+</div>
+</div>
+<p>Se destaca la presencia de muchos atípicos, con valor extremadamente altos como 14750147, el cual no tiene sentido para el precio de un galón de gasolina. Más adelante, se verán más a detalle estos valores.</p>
+<p>En cuanto a las variables categóricas restantes, tenemos ``BANDERA` que hace referencia a la compañía que tiene la sede especificada en el registro. Esta está liderada por Terpel (35,39%), Primax (13,47%), Biomax (12,02%), Texaco (10,11%) y Petromil (6,43%).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BANDERA
+TERPEL                 35.389243
+PRIMAX                 13.477493
+BIOMAX                 12.026812
+TEXACO                 10.111106
+PETROMIL                6.437563
+COOMULPINORT            3.328320
+AYATAWACOOP             3.006983
+ZEUSS                   2.794624
+PETROBRAS               1.817924
+DISCOWACOOP             1.453667
+ECOS                    1.348421
+ESSO                    1.306994
+PETRDECOL               1.304382
+PETRODECOL              1.245414
+PUMA                    1.141661
+DISCOM                  1.088664
+OCTANO                  0.828908
+PLUS MAS                0.674024
+P Y B                   0.628492
+BRIO                    0.268341
+ZAPATA Y VELASQUEZ      0.152271
+SAVE                    0.106366
+PROXXON                 0.062327
+Name: proportion, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>También se puede encontrar a la variable <code class="docutils literal notranslate"><span class="pre">*NOMBRE.COMERCIAL*</span></code> que indica el nombre de la estación de gasolina del registro. Esta cuenta con información sobre 5950 establecimientos en 911 municipios, guardados en la variable <code class="docutils literal notranslate"><span class="pre">*MUNICIPIOS*</span></code> de 32 departamentos, además de Bogotá D.C. como un departamento más representados en la variable ``<em>DEPARTAMENTO</em>`</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Número de empresas&quot;</span><span class="p">,</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;NOMBRE COMERCIAL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Número de municipios&quot;</span><span class="p">,</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;MUNICIPIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Número de departamentos:&quot;</span><span class="p">,</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;DEPARTAMENTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Número de empresas 5950
+Número de municipios 911
+Número de departamentos: 33
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;DEPARTAMENTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DEPARTAMENTO
+NARIÑO                                                      11.589778
+ANTIOQUIA                                                    9.333702
+NORTE DE SANTANDER                                           8.118145
+VALLE DEL CAUCA                                              6.999250
+CUNDINAMARCA                                                 6.206917
+BOGOTA D.C.                                                  5.982989
+CESAR                                                        5.860575
+LA GUAJIRA                                                   5.089142
+SANTANDER                                                    3.824321
+ATLANTICO                                                    3.207772
+TOLIMA                                                       2.990935
+BOYACA                                                       2.899497
+CORDOBA                                                      2.776710
+BOLIVAR                                                      2.622573
+PUTUMAYO                                                     2.466943
+HUILA                                                        2.371773
+META                                                         2.332586
+CAUCA                                                        2.096341
+RISARALDA                                                    2.028416
+MAGDALENA                                                    1.992588
+CALDAS                                                       1.685806
+SUCRE                                                        1.626465
+CASANARE                                                     1.024098
+CHOCO                                                        0.985284
+QUINDIO                                                      0.953561
+CAQUETA                                                      0.891981
+ARAUCA                                                       0.862870
+GUAVIARE                                                     0.389262
+VICHADA                                                      0.344103
+AMAZONAS                                                     0.191459
+ARCHIPIELAGO DE SAN ANDRES, SANTA CATALINA Y PROVIDENCIA     0.099648
+GUAINIA                                                      0.097409
+VAUPES                                                       0.057102
+Name: proportion, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los departamentos con mayor número de registros son Nariño (11,58%), Antioquia con un 9,3% seguido de Norte de Santander (8,11%). Departamentos como Vaupés, Guianía y Archipielago de San Andrés y Providencia representan menos del 0.1% cada uno.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;FECHA REGISTRO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;FECHA REGISTRO&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%b-%Y&#39;</span><span class="p">)</span>
+<span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;MES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;FECHA REGISTRO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month_name</span><span class="p">()</span>
+
+<span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;MES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MES
+June         26887
+November     25872
+May          25590
+January      22369
+February     22206
+March        22125
+August       21959
+September    21927
+April        21635
+October      19487
+December     19433
+July         18453
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>El número de registros por mes no se mantuvo constante, siendo junio el mes con más registros (26887) y julio (18453) el mes con menos registros, más adelante veremos mejor el comportamiento de los datos según el mes.</p>
+<p>Según un artículo publicado en septiembre del 2022 en <a class="reference external" href="http://portafolio.co">portafolio.co</a>, en Colombia, más del 90 % de la torta en la distribución de combustibles en el territorio nacional sigue concentrada en cinco grandes compañías: Terpel (42,6%), Primax (20,2%), Biomax (8,7%), Chevron (Texaco 10,7%) y Petromil (4,4%). Enfoquémonos en las principales 5 empresas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">d2023</span><span class="p">[</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;TERPEL&#39;</span><span class="p">,</span> <span class="s1">&#39;PRIMAX&#39;</span><span class="p">,</span> <span class="s1">&#39;BIOMAX&#39;</span><span class="p">,</span> <span class="s1">&#39;TEXACO&#39;</span><span class="p">,</span> <span class="s1">&#39;PETROMIL&#39;</span><span class="p">])]</span>
+<span class="n">gd</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">,</span> <span class="s1">&#39;MES&#39;</span><span class="p">])[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">resumen_precios</span> <span class="o">=</span> <span class="n">gd</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">:</span> <span class="s1">&#39;PROMEDIO_PRECIO&#39;</span><span class="p">})</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">resumen_precios</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;MES&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PROMEDIO_PRECIO&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Promedio por Mes y Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precio Promedio&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/87e7f7db40ee89eafcab4fceb3f266b811b9a8e7583a7130ccc3a269f38b6b1c.png" src="_images/87e7f7db40ee89eafcab4fceb3f266b811b9a8e7583a7130ccc3a269f38b6b1c.png" />
+</div>
+</div>
+<p>Se puede notar como en el transcurso del año, se mantiene un precio promedio similar en todas las compañías gasolineras, sin embargo en septiembre hubo un disparo en el precio de BIOMAX en comparación a las demás empresas. También se puede notar que en general PRIMAX maneja un precio más alto, seguido de TEXACO, luego TERPEL y por último BIOMAX.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2023_mensual</span> <span class="o">=</span> <span class="n">d2023</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;MES&#39;</span><span class="p">)[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">d2023_mensual</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">:</span> <span class="s1">&#39;PRECIO_PROMEDIO&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d2023</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;MES&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución del Precio por Mes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precio&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/702956538ff84af1197c21cf92c1b041d1c100737921764a257511e1a78efe4f.png" src="_images/702956538ff84af1197c21cf92c1b041d1c100737921764a257511e1a78efe4f.png" />
+</div>
+</div>
+<p>Se pueden observar muchísimos datos atípicos, pero el que más llama la atención es el que se encuentra en septiembre, el que se vio cuando se analizaron las variables individualmente como un valor muy exagerado. Veamos entonces todos los posibles valores atípicos que tiene nuestra base de datos.</p>
+</section>
+<section id="datos-atipicos">
+<h3>Datos atípicos<a class="headerlink" href="#datos-atipicos" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lb</span> <span class="o">=</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="n">up</span> <span class="o">=</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.975</span><span class="p">)</span>
+
+<span class="n">outlier_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lb</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">up</span><span class="p">)</span>
+
+
+<span class="n">mediana</span> <span class="o">=</span> <span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">d2023</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">outlier_mask</span><span class="p">,</span> <span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mediana</span>
+
+<span class="n">d2023</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FECHA REGISTRO</th>
+      <th>VALOR PRECIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>267943</td>
+      <td>267943.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2023-06-20 11:57:57.627704320</td>
+      <td>11805.762420</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2023-01-01 00:00:00</td>
+      <td>7550.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2023-04-01 00:00:00</td>
+      <td>9410.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2023-06-07 00:00:00</td>
+      <td>10880.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2023-09-22 00:00:00</td>
+      <td>13589.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2023-12-31 00:00:00</td>
+      <td>20120.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>3117.397179</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">d2023</span><span class="p">[</span><span class="n">d2023</span><span class="p">[</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;TERPEL&#39;</span><span class="p">,</span> <span class="s1">&#39;PRIMAX&#39;</span><span class="p">,</span> <span class="s1">&#39;BIOMAX&#39;</span><span class="p">,</span> <span class="s1">&#39;TEXACO&#39;</span><span class="p">,</span> <span class="s1">&#39;PETROMIL&#39;</span><span class="p">])]</span>
+<span class="n">gd</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">,</span> <span class="s1">&#39;MES&#39;</span><span class="p">])[</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">resumen_precios</span> <span class="o">=</span> <span class="n">gd</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;VALOR PRECIO&#39;</span><span class="p">:</span> <span class="s1">&#39;PROMEDIO_PRECIO&#39;</span><span class="p">})</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">resumen_precios</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;MES&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PROMEDIO_PRECIO&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;BANDERA&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precio Promedio por Mes y Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precio Promedio&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Bandera&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c573a1f3a3bf3b14bf91b306841f2ab9f92b12623527fc39b68459884de43b08.png" src="_images/c573a1f3a3bf3b14bf91b306841f2ab9f92b12623527fc39b68459884de43b08.png" />
+</div>
+</div>
+<p>En comparación a la gráfica realizada anteriormente con la base de datos sin imputar, podemos notar la gran diferencia con el pico que se apreciaba en el mes de septiembre puesto que ahí estaba el outlier más alejado por mucho.</p>
+<p>Veamos ahora la distribución del precio promedio a nivel departamental.Por motivos estéticos se realizó con ggplot para evitar afectaciones en el formato del quarto. Se dejan los códigos correspondientes al mapa con leaflet.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="sp.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Segunda parte</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mapa.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mapa de la quinta entrega</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pasos-a-seguir">Pasos a seguir</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias">Librerías</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-primera-parte">Desarrollo primera parte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sobre-los-datos">Sobre los datos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtros">Filtros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nas">NAs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas">Gráficas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-segunda-parte">Desarrollo segunda parte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Sobre los datos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-atipicos">Datos atípicos</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Valentina Bustamante
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
